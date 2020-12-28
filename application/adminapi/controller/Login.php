@@ -2,7 +2,7 @@
 
 namespace app\adminapi\controller;
 
-use app\adminapi\model\Admin;
+use app\common\model\Admin;
 use think\Controller;
 use tools\jwt\Token;
 
