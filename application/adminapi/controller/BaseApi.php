@@ -73,13 +73,16 @@ class BaseApi extends Controller
             $path = strtolower($this->request->controller()).'/'.strtolower($this->request->action());
             if ( ! in_array($path, $this->no_login)){
                 //需要做登录检测
-                $user_id = Token::getUserId();
+//                $user_id = Token::getUserId();
+                $user_id = 2;
                 if (empty($user_id)){
                     $this->fail('token验证失败', 403);
                 }
                 //将得到的用户id 放到请求信息中去  方便后续使用
-                $this->request->get('user_id', $user_id);
-                $this->request->post('user_id', $user_id);
+//                \think\Request::instance()->get(['user_id'=>$user_id]);
+//                \think\Request::instance()->post(['user_id'=>$user_id]);
+//                $this->request->post('user_id', $user_id);
+//                $this->request->get('user_id', $user_id);
             }
         }catch (\Exception $e){
             //token解析失败

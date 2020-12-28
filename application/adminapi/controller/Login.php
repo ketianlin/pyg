@@ -3,7 +3,6 @@
 namespace app\adminapi\controller;
 
 use app\common\model\Admin;
-use think\Controller;
 use tools\jwt\Token;
 
 class Login extends BaseApi
