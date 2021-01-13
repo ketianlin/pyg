@@ -88,8 +88,6 @@ class BaseApi extends Controller
                 \think\Request::instance()->post(['user_id'=>$user_id]);
 //                $this->request->post('user_id', $user_id);
 //                $this->request->get('user_id', $user_id);
-                $u2 = \think\Request::instance()->get('user_id');
-                $u3 = \think\Request::instance()->post('user_id');
             }
         }catch (\Exception $e){
             //token解析失败

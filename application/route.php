@@ -30,4 +30,13 @@ Route::domain('adminapi', function(){
     Route::resource('admins', 'adminapi/admin', [], ['id'=>'\d+']);
     //商品分类接口
     Route::resource('categorys', 'adminapi/category', [], ['id'=>'\d+']);
+
+    //单图片上传接口
+    Route::post('logo', 'adminapi/upload/logo');
+    //多图片上传接口
+    Route::post('images', 'adminapi/upload/images');
+    //商品品牌接口
+    Route::resource('brands', 'adminapi/brand', [], ['id'=>'\d+']);
+    //商品模型（类型）接口
+    Route::resource('types', 'adminapi/type', [], ['id'=>'\d+']);
 });
